@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.renren.modules.app.dao.UserUserDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="io.renren.modules.app.model.po.UserPO">
+        <id column="id" property="id" />
+        <result column="nick_name" property="nickName" />
+        <result column="face_icon" property="faceIcon" />
+        <result column="openid" property="openid" />
+        <result column="gender" property="gender" />
+        <result column="city" property="city" />
+        <result column="province" property="province" />
+        <result column="country" property="country" />
+        <result column="userID" property="userID" />
+        <result column="addTime" property="addTime" />
+        <result column="mobile" property="mobile" />
+        <result column="birthday" property="birthday" />
+        <result column="idNumber" property="idNumber" />
+        <result column="realName" property="realName" />
+        <result column="isMember" property="isMember" />
+        <result column="isDel" property="isDel" />
+        <result column="createTime" property="createTime" />
+        <result column="endLoginTime" property="endLoginTime" />
+    </resultMap>
+    
+    
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMapVO" type="io.renren.modules.app.model.vo.UserVO">
+        <id column="id" property="id" />
+        <result column="nick_name" property="nickName" />
+        <result column="face_icon" property="faceIcon" />
+        <result column="openid" property="openid" />
+        <result column="gender" property="gender" />
+        <result column="city" property="city" />
+        <result column="province" property="province" />
+        <result column="country" property="country" />
+        <result column="userID" property="userID" />
+        <result column="addTime" property="addTime" />
+        <result column="mobile" property="mobile" />
+        <result column="birthday" property="birthday" />
+        <result column="idNumber" property="idNumber" />
+        <result column="realName" property="realName" />
+        <result column="isMember" property="isMember" />
+        <result column="isDel" property="isDel" />
+        <result column="createTime" property="createTime" />
+        <result column="endLoginTime" property="endLoginTime" />
+        <result column="balance" property="balance" />
+        <result column="integralBalance" property="integralBalance" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, nick_name, face_icon, openid, gender, city, province, country, mobile, birthday, idNumber, realName
+    </sql>
+    
+    <sql id="Base_Column_List2">
+        id, nick_name, face_icon, openid, gender, city, province, country, userID, addTime, mobile, birthday, idNumber, realName, isMember, isDel, createTime, endLoginTime
+    </sql>
+    
+    <select id="findByOpenId" parameterType="string" resultMap="BaseResultMapVO" >
+    	SELECT <include refid="Base_Column_List"/> ,balance ,integralBalance FROM user u
+		LEFT JOIN user_purse up
+		ON u.id=up.userId
+		WHERE u.openid=#{openid}
+    </select>
+
+</mapper>

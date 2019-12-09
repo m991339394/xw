@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.renren.modules.app.dao.AdminHCardDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="io.renren.modules.app.model.po.HCardPO">
+        <id column="id" property="id" />
+        <result column="hCard_type_id" property="hcardTypeId" />
+        <result column="name" property="name" />
+        <result column="theme" property="theme" />
+        <result column="outer_img" property="outerImg" />
+        <result column="stock" property="stock" />
+        <result column="sale_count" property="saleCount" />
+        <result column="limit_count" property="limitCount" />
+        <result column="total" property="total" />
+        <result column="upper_shelf" property="upperShelf" />
+        <result column="remarks" property="remarks" />
+        <result column="use_scope" property="useScope" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        hCard_type_id, id, name, theme, outer_img, stock, sale_count, limit_count, total, upper_shelf, remarks, use_scope, created_time, updated_time
+    </sql>
+
+</mapper>

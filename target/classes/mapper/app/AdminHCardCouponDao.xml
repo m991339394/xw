@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.renren.modules.app.dao.AdminHCardCouponDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="io.renren.modules.app.model.po.HCardCouponPO">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="theme" property="theme" />
+        <result column="img" property="img" />
+        <result column="money" property="money" />
+        <result column="remarks" property="remarks" />
+        <result column="time_limit" property="timeLimit" />
+        <result column="use_scope" property="useScope" />
+        <result column="created_time" property="createdTime" />
+        <result column="updated_time" property="updatedTime" />
+        <result column="hCard_price_id" property="hcardPriceId" />
+         <result column="hCard_coupon_id" property="hCardcouponid" />
+        <result column="state" property="state" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, theme, img, money, remarks, time_limit, use_scope, created_time, updated_time, hCard_price_id ,hCard_coupon_id ,state
+    </sql>
+
+</mapper>

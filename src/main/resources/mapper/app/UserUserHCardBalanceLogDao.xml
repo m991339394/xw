@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.renren.modules.app.dao.UserUserHCardBalanceLogDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="io.renren.modules.app.model.po.UserHCardBalanceLogPO">
+        <id column="id" property="id" />
+        <result column="openid" property="openid" />
+        <result column="userId" property="userId" />
+        <result column="balanceFront" property="balanceFront" />
+        <result column="balanceAfter" property="balanceAfter" />
+        <result column="balance" property="balance" />
+        <result column="useStatus" property="useStatus" />
+        <result column="sourceType" property="sourceType" />
+        <result column="orderId" property="orderId" />
+        <result column="orderType" property="orderType" />
+        <result column="remark" property="remark" />
+        <result column="useTime" property="useTime" />
+        <result column="hCardId" property="hCardId" />
+        <result column="hCardName" property="hCardName" />
+        <result column="consumer" property="consumer" />
+        <result column="phone" property="phone" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, openid, userId, balanceFront, balanceAfter, balance, useStatus, sourceType, orderId, orderType, remark, useTime, hCardId, hCardName, consumer, phone
+    </sql>
+    
+    <select id="getUserHCardBalanceLogByUseStatus" parameterType="map" resultMap="BaseResultMap" >
+    	SELECT <include refid="Base_Column_List"/> FROM ggwl_user_HCard_balance_log
+		WHERE useStatus=#{useStatus}
+		AND openid=#{openid}
+		ORDER BY useTime DESC
+    </select>
+    
+</mapper>

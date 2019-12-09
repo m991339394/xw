@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.renren.modules.app.dao.AdminUserHCardDao">
+	<!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="io.renren.modules.app.model.po.UserHCardPO">
+        <id column="id" property="id" />
+        <result column="hCard_type_id" property="hcardTypeId" />
+        <result column="openid" property="openid" />
+        <result column="out_trade_no" property="outTradeNo" />
+        <result column="name" property="name" />
+        <result column="consumer_openid" property="consumerOpenid" />
+        <result column="give_openid" property="giveOpenid" />
+        <result column="receive_openid" property="receiveOpenid" />
+        <result column="balance" property="balance" />
+        <result column="channel" property="channel" />
+        <result column="fetch_time" property="fetchTime" />
+        <result column="give_time" property="giveTime" />
+        <result column="state" property="state" />
+        <result column="hCard_map_id" property="hCardMapId" />
+        <result column="img" property="img" />
+        <result column="gift_restriction_count" property="giftRestrictionCount" />
+        <result column="schedule_id" property="scheduleId" />
+        <result column="hCard_type_name" property="hCardTypeName" />
+        <result column="hCard_price_id" property="hCardPriceId" />
+        <result column="hCard_give_id" property="hCardGiveId" />
+    </resultMap>
+
+    <resultMap id="BaseResultMapVO" type="io.renren.modules.app.model.vo.UserHCardVO">
+        <id column="id" property="id" />
+        <result column="hCard_type_id" property="hcardTypeId" />
+        <result column="openid" property="openid" />
+        <result column="out_trade_no" property="outTradeNo" />
+        <result column="name" property="name" />
+        <result column="consumer_openid" property="consumerOpenid" />
+        <result column="give_openid" property="giveOpenid" />
+        <result column="receive_openid" property="receiveOpenid" />
+        <result column="balance" property="balance" />
+        <result column="channel" property="channel" />
+        <result column="fetch_time" property="fetchTime" />
+        <result column="give_time" property="giveTime" />
+        <result column="state" property="state" />
+        <result column="hCard_map_id" property="hCardMapId" />
+        <result column="img" property="img" />
+        <result column="gift_restriction_count" property="giftRestrictionCount" />
+        <result column="schedule_id" property="scheduleId" />
+        <result column="hCard_type_name" property="hCardTypeName" />
+        <result column="hCard_price_id" property="hCardPriceId" />
+        <result column="hCard_give_id" property="hCardGiveId" />
+
+        <result column="nick_name" property="nickName" />
+        <result column="mobile" property="mobile" />
+        <result column="realName" property="realName" />
+    </resultMap>
+    
+    <resultMap id="BaseResultMapDTO" type="io.renren.modules.app.model.dto.UserHCardDTO">
+        <result column="hCard_price_id" property="hCardPriceId" />
+    	 <result column="count" property="count" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        hCard_type_id, openid, id, out_trade_no, name ,consumer_openid ,receive_openid ,give_openid ,balance,
+        channel, fetch_time, give_time, state,
+        hCard_map_id,img ,gift_restriction_count ,schedule_id ,hCard_type_name ,hCard_price_id ,hCard_give_id
+    </sql>
+
+    <!-- 购买记录(用户购卡记录或心意卡销售记录) -->
+    <!-- h.id ,h.out_trade_no ,h.openid ,h.name, h.balance, h.hCard_type_name 
+  		,h.img  ,h.fetch_time ,h.hCard_price_id  -->
+    <select id="getBuyRecord" resultType="io.renren.modules.app.model.form.UserHCardForm" resultMap="BaseResultMapVO">
+        SELECT h.id ,h.out_trade_no ,h.openid ,h.name, h.balance, h.hCard_type_name
+        ,h.img  ,h.fetch_time ,h.give_time ,h.hCard_price_id
+        ,u.nick_name ,u.realName ,u.mobile
+        FROM ggwl_user_HCard h
+        RIGHT JOIN ggwl_HCard_buy_log l
+        ON h.id=l.hCard_id
+        LEFT JOIN user u
+        ON h.openid=u.openid
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test='startTime!=null and startTime!=""'>
+                AND h.fetch_time &gt;= #{startTime}
+            </if>
+            <if test='endTime!=null and endTime!=""'>
+                AND h.fetch_time &lt;= #{endTime}
+            </if>
+            <if test='outTradeNo!=null and outTradeNo!=""'>
+                AND h.out_trade_no like "%"#{outTradeNo}"%"
+            </if>
+
+            <if test='balance!=null and balance!=""'>
+                AND h.balance=#{balance}
+            </if>
+
+            <if test='nickName!=null and nickName!=""'>
+                AND u.nick_name like "%"#{nickName}"%"
+            </if>
+
+            <if test='mobile!=null and mobile!=""'>
+                AND u.mobile like "%"#{mobile}"%"
+            </if>
+
+            <if test='name!=null and name!=""'>
+                AND h.name like "%"#{name}"%"
+            </if>
+        </trim>
+
+        ORDER BY h.fetch_time DESC
+    </select>
+
+    <!-- 消费记录 -->
+    <select id="getConsumeRecord" resultType="io.renren.modules.app.model.form.UserHCardForm" resultMap="BaseResultMapVO">
+        SELECT h.id ,h.out_trade_no ,h.name, h.hCard_type_name ,h.img
+        ,l.useTime fetch_time ,l.balance
+        ,u.nick_name ,u.realName ,u.mobile
+        FROM ggwl_user_HCard h
+        RIGHT JOIN ggwl_user_HCard_balance_log l
+        ON h.id=l.hCardId
+        LEFT JOIN user u
+        ON h.openid=u.openid
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test='startTime!=null and startTime!=""'>
+                AND l.useTime &gt;= #{startTime}
+            </if>
+            <if test='endTime!=null and endTime!=""'>
+                AND l.useTime &lt;= #{endTime}
+            </if>
+            <if test='outTradeNo!=null and outTradeNo!=""'>
+                AND h.out_trade_no like "%"#{outTradeNo}"%"
+            </if>
+
+            <if test='balance!=null and balance!=""'>
+                AND h.balance=#{balance}
+            </if>
+
+            <if test='nickName!=null and nickName!=""'>
+                AND u.nick_name like "%"#{nickName}"%"
+            </if>
+
+            <if test='mobile!=null and mobile!=""'>
+                AND u.mobile like "%"#{mobile}"%"
+            </if>
+
+            <if test='name!=null and name!=""'>
+                AND h.name like "%"#{name}"%"
+            </if>
+        </trim>
+
+        ORDER BY l.useTime DESC
+    </select>
+
+
+    <!-- 转赠记录() -->
+    <select id="getGiveRecord" resultType="io.renren.modules.app.model.form.UserHCardForm" resultMap="BaseResultMapVO">
+        SELECT h.id ,h.out_trade_no ,h.openid ,h.name, h.balance, h.hCard_type_name
+        ,h.img  ,h.hCard_price_id ,h.consumer_openid
+        ,l.give_openid ,l.receive_openid ,l.state ,l.give_time fetch_time ,l.receive_time give_time
+        ,u.nick_name ,u.realName ,u.mobile
+        FROM ggwl_user_HCard h
+        RIGHT JOIN ggwl_HCard_give_log l
+        ON h.id=l.hCard_id
+        LEFT JOIN user u
+        ON h.openid=u.openid
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test='startTime!=null and startTime!=""'>
+                AND l.give_time &gt;= #{startTime}
+            </if>
+            <if test='endTime!=null and endTime!=""'>
+                AND l.give_time &lt;= #{endTime}
+            </if>
+            <if test='outTradeNo!=null and outTradeNo!=""'>
+                AND h.out_trade_no like "%"#{outTradeNo}"%"
+            </if>
+
+            <if test='balance!=null and balance!=""'>
+                AND h.balance=#{balance}
+            </if>
+
+            <if test='nickName!=null and nickName!=""'>
+                AND u.nick_name like "%"#{nickName}"%"
+            </if>
+
+            <if test='mobile!=null and mobile!=""'>
+                AND u.mobile like "%"#{mobile}"%"
+            </if>
+
+            <if test='name!=null and name!=""'>
+                AND h.name like "%"#{name}"%"
+            </if>
+        </trim>
+
+        ORDER BY l.give_time DESC
+    </select>
+
+
+    <!-- 激活记录() -->
+    <select id="getActivedHCard" resultType="io.renren.modules.app.model.form.UserHCardForm" resultMap="BaseResultMapVO">
+        SELECT h.id ,h.out_trade_no ,h.name, h.hCard_type_name ,h.img ,h.state
+        ,l.useTime give_time ,l.balance
+        ,u.nick_name ,u.realName ,u.mobile
+        FROM ggwl_user_HCard h
+        RIGHT JOIN ggwl_user_HCard_balance_log l
+        ON h.id=l.hCardId
+        LEFT JOIN user u
+        ON h.openid=u.openid
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test='startTime!=null and startTime!=""'>
+                AND l.useTime &gt;= #{startTime}
+            </if>
+            <if test='endTime!=null and endTime!=""'>
+                AND l.useTime &lt;= #{endTime}
+            </if>
+            <if test='outTradeNo!=null and outTradeNo!=""'>
+                AND h.out_trade_no like "%"#{outTradeNo}"%"
+            </if>
+
+            <if test='balance!=null and balance!=""'>
+                AND h.balance=#{balance}
+            </if>
+
+            <if test='nickName!=null and nickName!=""'>
+                AND u.nick_name like "%"#{nickName}"%"
+            </if>
+
+            <if test='mobile!=null and mobile!=""'>
+                AND u.mobile like "%"#{mobile}"%"
+            </if>
+
+            <if test='name!=null and name!=""'>
+                AND h.name like "%"#{name}"%"
+            </if>
+        </trim>
+
+        ORDER BY l.useTime DESC
+    </select>
+		
+</mapper>
