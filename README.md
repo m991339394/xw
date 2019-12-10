@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **项目说明** 
 - renren-fast是一个轻量级的，前后端分离的Java快速开发平台，能快速开发项目并交付【接私活利器】
 - 支持MySQL、Oracle、SQL Server、PostgreSQL等主流数据库
@@ -113,3 +114,41 @@ renren-fast
 ![输入图片说明](https://gitee.com/uploads/images/2018/0505/173151_12d065db_63154.jpeg "在这里输入图片标题")
 
 <br>
+=======
+# xw
+
+#### Description
+个人版小程序
+
+#### Software Architecture
+Software architecture description
+
+#### Installation
+
+1.  xxxx
+2.  xxxx
+3.  xxxx
+
+#### Instructions
+
+1.  xxxx
+2.  xxxx
+3.  xxxx
+
+#### Contribution
+
+1.  Fork the repository
+2.  Create Feat_xxx branch
+3.  Commit your code
+4.  Create Pull Request
+
+
+#### Gitee Feature
+
+1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
+2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
+3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
+4.  The most valuable open source project [GVP](https://gitee.com/gvp)
+5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
+6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+>>>>>>> c1091e47253c48adba8a95095b7cb46927e8ec1b
