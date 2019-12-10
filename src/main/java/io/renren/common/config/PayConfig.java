@@ -9,10 +9,10 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public final class PayConfig {
-	// 旅游卡appid
-    public static final String APPID = "wxce392efeec0169a9";
-    // 旅游卡secret
-    public static final String APP_SECRET = "2f990862d916fc6c85fb64e6986caf87";
+	// 个人小程序appid
+    public static final String APPID = "wx4e50b5dbf857c45c";
+    // 个人小程序secret
+    public static final String APP_SECRET = "a5b945b266de2b51e014a2c5aa7bd02b";
 	// 礼品之家appid
     public static final String APPID2= "wxeb58125a331dfc6c";
     // 礼品之家secret

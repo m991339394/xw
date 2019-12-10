@@ -161,7 +161,7 @@ public class ImageUtil {
         int pTY = pY + pH + increase;
         int length = remark.length();
         if(length>rowTextNum){
-            pTX = (WIDTH - rowTextNum) / 2;
+            pTX = (WIDTH - (remarkWidth/length)*rowTextNum) / 2;
         }
         for (int i = 0; i < length; i += rowTextNum) {
             if (i + rowTextNum <= length) {
@@ -205,10 +205,10 @@ public class ImageUtil {
         }
 
 //        本地服务器
-        ImageIO.write(bgBufImage, "png", new File("D:/pic/demo2.png"));
-        System.out.println("生成图片完成");
+//        ImageIO.write(bgBufImage, "png", new File("D:/pic/demo2.png"));
+//        System.out.println("生成图片完成");
 //        网络服务器
-//        ImageIO.write(bgBufImage, "png", new File(savePath));
+        ImageIO.write(bgBufImage, "png", new File(savePath));
 
         return StaticUtil.STATIC_URL + newPath;
     }

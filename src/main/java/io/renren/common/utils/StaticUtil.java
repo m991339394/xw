@@ -5,12 +5,12 @@ import java.io.File;
 public class StaticUtil {
 
 
-    public static final String STATIC_URL = "https://flowAdmin.834445.net/file";
+    public static final String STATIC_URL = "http://xw.zonguo.cn/file";
 
 	// 图片存放的根路径
 //    public static final String STATIC_URL = "http://192.168.111.190:8088/pic";  // /home/centos/wenjian/   <==>   https://zonguo.xyz/filepath/
 
-    public static final String SAVE_URL_LINUX = File.separator + "www" + File.separator + "wwwroot" + File.separator + "flowAdmin.834445.net"+File.separator + "file";
+    public static final String SAVE_URL_LINUX = File.separator + "www" + File.separator + "wwwroot" + File.separator + "xw.zonguo.cn"+File.separator + "file";
     
 //    public static final String SAVE_URL_LINUX = "D:\\pic";
 
