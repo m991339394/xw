@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b982cf48-1cc1-48a0-91bb-2e04a8681e7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/controller/admin/AdminUserLeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/dao/AdminUserLeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/model/po/LePO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/service/AdminUserLeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/service/impl/AdminUserLeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/app/AdminUserLeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/renren/common/aspect/SysLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/renren/common/aspect/SysLogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/service/AdminHCardTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/service/AdminHCardTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +70,13 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -79,12 +91,6 @@
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="737" />
-    <option name="y" value="49" />
-    <option name="width" value="925" />
-    <option name="height" value="1001" />
   </component>
   <component name="ProjectId" id="1UpPHtweh91DQ6aBNUnfxu0g5H0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -102,7 +108,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper/app" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -112,6 +124,20 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\wx\xw\src\main\resources\mapper\app" />
+      <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\model\form" />
+      <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\demo" />
+      <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\dao" />
+      <recent name="D:\GitProject\flow\src\main\java\io\renren\common\config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.renren.modules.app.service" />
+      <recent name="io.renren.modules.app.service.impl" />
+      <recent name="io.renren.modules.app.model.po" />
+      <recent name="io.renren.modules.app.dao" />
+      <recent name="io.renren.modules.app.controller.admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\controller\user" />
       <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\controller\admin" />
@@ -119,92 +145,8 @@
       <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\demo" />
       <recent name="D:\GitProject\flow\src\main\java\io\renren\common\utils" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="io.renren.common.config" />
-      <recent name="io.renren.modules.app.model.form" />
-      <recent name="io.renren.common.Constants" />
-      <recent name="io.renren.modules.app.controller" />
-      <recent name="io.renren.common.utils" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\model\form" />
-      <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\demo" />
-      <recent name="D:\GitProject\flow\src\main\java\io\renren\modules\app\dao" />
-      <recent name="D:\GitProject\flow\src\main\java\io\renren\common\config" />
-      <recent name="D:\GitProject\flow\src\main\resources" />
-    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.RenrenApplication">
-    <configuration name="ImageUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.renren.common.utils.ImageUtil" />
-      <module name="xw" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.renren.common.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="User____MpGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.renren.User____MpGenerator" />
-      <module name="xw" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.renren.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WXQR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.renren.WXQR" />
-      <module name="xw" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.renren.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in flow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xw" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WXQR.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="xw" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.renren.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.renren" />
-      <option name="MAIN_CLASS_NAME" value="io.renren.WXQR" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RenrenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="xw" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="io.renren.RenrenApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="PORT" value="7001" />
       <deployment />
@@ -335,6 +277,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ImageUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.renren.common.utils.ImageUtil" />
+      <module name="xw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.renren.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="User____MpGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.renren.User____MpGenerator" />
+      <module name="xw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.renren.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WXQR" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.renren.WXQR" />
+      <module name="xw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.renren.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in flow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xw" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WXQR.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="xw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.renren.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.renren" />
+      <option name="MAIN_CLASS_NAME" value="io.renren.WXQR" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenrenApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="xw" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.renren.RenrenApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WXQR.test" />
@@ -442,7 +454,11 @@
       <workItem from="1575890871956" duration="2544000" />
       <workItem from="1575941350167" duration="4055000" />
       <workItem from="1576050484150" duration="51000" />
-      <workItem from="1576051052451" duration="31000" />
+      <workItem from="1576051052451" duration="3189000" />
+      <workItem from="1576121092434" duration="1891000" />
+      <workItem from="1576202009529" duration="2247000" />
+      <workItem from="1576236363853" duration="480000" />
+      <workItem from="1576237102665" duration="2552000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1575882543915</created>
@@ -458,7 +474,28 @@
       <option name="project" value="LOCAL" />
       <updated>1575948468393</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="初始化项目">
+      <created>1576051155274</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576051155274</updated>
+    </task>
+    <task id="LOCAL-00004" summary="初始化项目">
+      <created>1576051857690</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1576051857690</updated>
+    </task>
+    <task id="LOCAL-00005" summary="修改r">
+      <created>1576051957222</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576051957222</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -466,17 +503,78 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化项目" />
+    <MESSAGE value="修改r" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改r" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="572" y="122" key="CommitChangelistDialog2" timestamp="1576051095278">
+    <state x="552" y="186" key="#Notifications" timestamp="1576205477850">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="572" y="122" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1576051095278" />
+    <state x="552" y="186" key="#Notifications/0.0.1920.1050@0.0.1920.1050" timestamp="1576205477850" />
+    <state x="673" y="333" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576205166709">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="673" y="333" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1576205166709" />
+    <state x="743" y="391" width="433" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576239103024">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="743" y="391" width="433" height="274" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050@0.0.1920.1050" timestamp="1576239103024" />
+    <state x="572" y="122" key="CommitChangelistDialog2" timestamp="1576051955262">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="572" y="122" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1576051955262" />
+    <state x="740" y="282" key="FileChooserDialogImpl" timestamp="1576065905108">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="282" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1576065905108" />
+    <state width="938" height="221" key="GridCell.Tab.0.bottom" timestamp="1576236844645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="221" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576236844645" />
+    <state width="938" height="221" key="GridCell.Tab.0.center" timestamp="1576236844645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="221" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576236844645" />
+    <state width="938" height="221" key="GridCell.Tab.0.left" timestamp="1576236844645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="221" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576236844645" />
+    <state width="938" height="221" key="GridCell.Tab.0.right" timestamp="1576236844645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="221" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576236844645" />
+    <state width="938" height="221" key="GridCell.Tab.1.bottom" timestamp="1576236844645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="221" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1576236844645" />
+    <state width="938" height="221" key="GridCell.Tab.1.center" timestamp="1576236844645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="221" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1576236844645" />
+    <state width="938" height="221" key="GridCell.Tab.1.left" timestamp="1576236844645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="221" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1576236844645" />
+    <state width="938" height="221" key="GridCell.Tab.1.right" timestamp="1576236844645">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="938" height="221" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576236844645" />
     <state x="463" y="169" key="SettingsEditor" timestamp="1576051082590">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="463" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1576051082590" />
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1576239726344">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1576239726344" />
+    <state x="678" y="326" key="git4idea.merge.GitPullDialog" timestamp="1576239715857">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="678" y="326" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576239715857" />
+    <state x="334" y="232" key="new project wizard" timestamp="1576236809309">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="334" y="232" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1576236809309" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

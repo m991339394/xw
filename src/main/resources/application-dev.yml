@@ -3,9 +3,9 @@ spring:
         type: com.alibaba.druid.pool.DruidDataSource
         druid:
             driver-class-name: com.mysql.jdbc.Driver
-            url: jdbc:mysql://xw.zonguo.cn:3306/xw_zonguo_cn?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
-            username: xw_zonguo_cn
-            password: rMtYsrS6xiWYM4tt
+            url: jdbc:mysql://localhost:3307/xw_zonguo_cn?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+            username: root
+            password: root
             initial-size: 10
             max-active: 100
             min-idle: 10

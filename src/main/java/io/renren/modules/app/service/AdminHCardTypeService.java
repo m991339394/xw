@@ -16,4 +16,6 @@ public interface AdminHCardTypeService extends IService<HCardTypePO> {
 	
 	Result<?> upperSheftAndLowerSheft(HCardTypePO hCardTypePO);
 
+
+
 }

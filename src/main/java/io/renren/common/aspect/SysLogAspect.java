@@ -35,7 +35,7 @@ import java.util.Date;
 
 @Component
 @Aspect
-public class SysLogAspect {
+public class  SysLogAspect {
 	@Autowired
 	private SysLogService sysLogService;
 	
