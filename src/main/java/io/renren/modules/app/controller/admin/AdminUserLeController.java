@@ -35,7 +35,7 @@ public class AdminUserLeController extends BaseController {
     AdminHCardTypeService typeService;
 
     /**
-     * 查找全部
+     * 查找全部文章
      * @return
      */
     @RequestMapping(value = "/list.do", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
@@ -47,14 +47,9 @@ public class AdminUserLeController extends BaseController {
 
 
     /**
-     *
-     * @Title: add
-     * @Description: 新增文章
-     * @param: @param hCardTypePO
-     * @param: @return
-     * @return: Result<?>
-     * @date: 2019年10月13日:下午3:25:57
-     * @throws
+     * 新增文章
+     * @param lePO
+     * @return
      */
     @RequestMapping(value = "/add.do", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public Result<?> add(@RequestBody LePO lePO){
@@ -64,20 +59,16 @@ public class AdminUserLeController extends BaseController {
             lePO.setTitle(lePO.getTitle());
             lePO.setCreateTime(new Date());
         }
+        lePO.setCreateTime(new Date());
         boolean flag=adminUserLeService.save(lePO);
         return flag?Result.success():Result.fail("新增失败！");
     }
 
 
     /**
-     *
-     * @Title: add
-     * @Description: 修改
-     * @param: @param hCardTypePO
-     * @param: @return
-     * @return: Result<?>
-     * @date: 2019年10月13日:下午3:25:57
-     * @throws
+     * 修改文章
+     * @param lePO
+     * @return
      */
     @RequestMapping(value = "/update.do", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     public Result<?> update(@RequestBody LePO lePO){
@@ -85,21 +76,18 @@ public class AdminUserLeController extends BaseController {
         if(lePO.getId()!=null){
             HCardTypePO hCardTypePO = typeService.getById(lePO.getId());
             lePO.setTitle(lePO.getTitle());
-            lePO.setCreateTime(new Date());
+            lePO.setUpdateTime(new Date());
         }
+
         boolean flag=adminUserLeService.updateById(lePO);
         return flag?Result.success():Result.fail("修改失败！");
     }
 
     /**
-     *
-     * @Title: delete
-     * @Description: 删除
-     * @param: @param id
-     * @param: @return
-     * @return: Result<?>
-     * @date: 2019年10月13日:下午3:29:17
-     * @throws
+     /*
+     * 删除文章
+     * @param id
+     * @return
      */
     @RequestMapping(value = "/delete.do", method = RequestMethod.GET, produces = "application/json;charset=UTF-8")
     public Result<?> delete(@RequestParam(value = "id") Long id){
