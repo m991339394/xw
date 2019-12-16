@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b982cf48-1cc1-48a0-91bb-2e04a8681e7a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/controller/admin/AdminUserLeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/controller/admin/AdminUserLeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/dao/AdminUserLeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/renren/modules/app/dao/AdminUserLeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/app/AdminUserLeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/app/AdminUserLeDao.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +107,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="settings.gitee" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -451,6 +445,7 @@
       <workItem from="1576202009529" duration="2247000" />
       <workItem from="1576236363853" duration="480000" />
       <workItem from="1576237102665" duration="5547000" />
+      <workItem from="1576467989010" duration="1183000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1575882543915</created>
@@ -558,18 +553,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1340" height="340" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1576286610251" />
-    <state x="463" y="169" key="SettingsEditor" timestamp="1576051082590">
+    <state x="463" y="169" key="SettingsEditor" timestamp="1576470360766">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="463" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1576051082590" />
+    <state x="463" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1576470360766" />
     <state x="552" y="260" key="Vcs.Push.Dialog.v2" timestamp="1576241191721">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="552" y="260" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1576241191721" />
-    <state x="678" y="326" key="git4idea.merge.GitPullDialog" timestamp="1576239715857">
+    <state x="678" y="326" key="git4idea.merge.GitPullDialog" timestamp="1576470346890">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="678" y="326" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576239715857" />
+    <state x="678" y="326" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1576470346890" />
     <state x="334" y="232" key="new project wizard" timestamp="1576236809309">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
